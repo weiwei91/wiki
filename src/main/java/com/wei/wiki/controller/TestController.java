@@ -1,7 +1,8 @@
 package com.wei.wiki.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 /**
  * @Description:
@@ -11,8 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String hello(){
         return "hello";
+    }
+
+    @PostMapping("/hello/post")
+    public String hellopost(@RequestParam Map<String,String> params){
+        return "hello post:"+params.get("name");
     }
 }
