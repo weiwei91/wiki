@@ -14,11 +14,11 @@ public class TestController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello";
+        return "hello3";
     }
 
     @PostMapping("/hello/post")
     public String hellopost(@RequestParam Map<String,String> params){
-        return "hello post:"+params.get("name");
+        return "hello post:"+params.get("name1");
     }
 }
