@@ -1,5 +1,7 @@
 package com.wei.wiki.controller;
 
+import com.wei.wiki.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -12,9 +14,17 @@ import java.util.Map;
 @RestController
 public class TestController {
 
+    @Autowired
+    private DemoService demoService;
+
     @GetMapping("/hello")
     public String hello(){
         return "hello3";
+    }
+
+    @GetMapping("/demo")
+    public Object demo(){
+       return "";
     }
 
     @PostMapping("/hello/post")

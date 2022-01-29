@@ -7,3 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Abc123++
+
+
+mybatis:
+  mapper-locations: classpath:/pammer/**/*.xml
