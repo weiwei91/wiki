@@ -1,5 +1,7 @@
 package com.wei.wiki.dto.resp;
 
+//todo 需要优化
+
 public class CommonResp<T> {
 
     /**
@@ -51,3 +53,4 @@ public class CommonResp<T> {
         return sb.toString();
     }
 }
+
