@@ -24,7 +24,7 @@ public class TestController {
 
     @GetMapping("/demo")
     public Object demo(){
-       return "";
+       return demoService.list();
     }
 
     @PostMapping("/hello/post")
