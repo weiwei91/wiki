@@ -137,4 +137,9 @@ export default defineComponent({
   border-radius: 8%;
   margin: 5px 0;
 }
+
+.ant-pagination {
+  position: absolute;
+  bottom: 0;
+}
 </style>
