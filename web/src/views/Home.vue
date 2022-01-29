@@ -100,8 +100,8 @@ export default defineComponent({
 
 
     onMounted(() => {
-      console.log("onMounted");
-        axios.get(process.env.VUE_APP_SERVER+"/ebook/list").then(function (response){
+      console.log("onMounted1");
+        axios.get("/ebook/list").then(function (response){
           const data = response.data
            ebooks.value = data.content.list;
         });
