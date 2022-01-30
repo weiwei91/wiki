@@ -45,7 +45,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
                         "/*/delete/**",
                         "/*/reset-password");
 
-        registry.addInterceptor(logInterceptor)
-                .addPathPatterns("/**");
+//        registry.addInterceptor(logInterceptor)
+//                .addPathPatterns("/**");
     }
 }
