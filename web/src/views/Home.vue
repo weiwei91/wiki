@@ -94,13 +94,9 @@ for (let i = 0; i < 23; i++) {
 export default defineComponent({
   name: 'Home',
   setup(){
-    console.log("setup");
     //响应参数，可以实时刷新
     const ebooks = ref();
-
-
     onMounted(() => {
-      console.log("onMounted1");
         axios.get("/ebook/list").then(function (response){
           const data = response.data
            ebooks.value = data.content.list;
