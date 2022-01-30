@@ -18,3 +18,14 @@ insert into `ebook` (id,name,description) values(2,'spring boot入门教程','�
 insert into `ebook` (id,name,description) values(3,'spring boot入门教程','零基础入门开发');
 insert into `ebook` (id,name,description) values(4,'spring boot入门教程','零基础入门开发');
 insert into `ebook` (id,name,description) values(5,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(6,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(7,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(8,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(9,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(10,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(11,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(12,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(13,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(14,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(15,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description) values(16,'spring boot入门教程','零基础入门开发');
