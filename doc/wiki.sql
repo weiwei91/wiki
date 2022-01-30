@@ -29,3 +29,22 @@ insert into `ebook` (id,name,description) values(13,'spring boot入门教程','�
 insert into `ebook` (id,name,description) values(14,'spring boot入门教程','零基础入门开发');
 insert into `ebook` (id,name,description) values(15,'spring boot入门教程','零基础入门开发');
 insert into `ebook` (id,name,description) values(16,'spring boot入门教程','零基础入门开发');
+
+
+# 分类表
+drop table if exists `category`;
+create table `category` (
+                         `id` bigint not null comment 'id',
+                         `parent` bigint not null default 0 comment '父id',
+                         `name` varchar(200) comment '名称',
+                         `sort` int comment '顺序',
+                         primary key (`id`)
+) engine =innodb default charset =utf8mb4 comment ='分类';
+
+insert into `category` (id,parent,name,sort) values(100,000,'前端开发',100);
+insert into `category` (id,parent,name,sort) values(101,100,'vue',101);
+insert into `category` (id,parent,name,sort) values(102,100,'html & css',102);
+insert into `category` (id,parent,name,sort) values(200,000,'java',200);
+insert into `category` (id,parent,name,sort) values(201,200,'基础应用',201);
+insert into `category` (id,parent,name,sort) values(202,200,'框架应用',202);
+insert into `category` (id,parent,name,sort) values(300,300,'python',300);
