@@ -13,22 +13,9 @@ create table `ebook` (
     primary key (`id`)
 ) engine =innodb default charset =utf8mb4 comment ='电子书';
 
-insert into `ebook` (id,name,description) values(1,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(2,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(3,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(4,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(5,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(6,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(7,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(8,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(9,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(10,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(11,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(12,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(13,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(14,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(15,'spring boot入门教程','零基础入门开发');
-insert into `ebook` (id,name,description) values(16,'spring boot入门教程','零基础入门开发');
+insert into `ebook` (id,name,description,category1_id,category2_id) values(1,'spring boot入门教程','零基础入门开发',200,202);
+insert into `ebook` (id,name,description,category1_id,category2_id) values(2,'深入理解java虚拟机','深入理解java虚拟机',200,201);
+
 
 
 # 分类表
@@ -48,3 +35,12 @@ insert into `category` (id,parent,name,sort) values(200,000,'java',200);
 insert into `category` (id,parent,name,sort) values(201,200,'基础应用',201);
 insert into `category` (id,parent,name,sort) values(202,200,'框架应用',202);
 insert into `category` (id,parent,name,sort) values(300,300,'python',300);
+insert into `category` (id,parent,name,sort) values(301,300,'进阶方向应用',302);
+insert into `category` (id,parent,name,sort) values(400,000,'数据库',400);
+insert into `category` (id,parent,name,sort) values(401,400,'mysql',401);
+insert into `category` (id,parent,name,sort) values(402,400,'pgsql',402);
+insert into `category` (id,parent,name,sort) values(500,000,'其他',500);
+insert into `category` (id,parent,name,sort) values(501,500,'服务器',501);
+insert into `category` (id,parent,name,sort) values(502,500,'开发工具',502);
+insert into `category` (id,parent,name,sort) values(503,500,'热门服务端语言',503);
+
