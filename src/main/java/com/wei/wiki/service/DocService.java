@@ -9,7 +9,7 @@ import com.wei.wiki.exception.BusinessException;
 import com.wei.wiki.exception.BusinessExceptionCode;
 import com.wei.wiki.mapper.ContentMapper;
 import com.wei.wiki.mapper.DocMapper;
-import com.wei.wiki.mapper.DocMapperCust;
+//import com.wei.wiki.mapper.DocMapperCust;
 import com.wei.wiki.dto.req.DocQueryReq;
 import com.wei.wiki.dto.req.DocSaveReq;
 import com.wei.wiki.dto.resp.DocQueryResp;
@@ -137,7 +137,7 @@ public class DocService {
     public String findContent(Long id) {
         Content content = contentMapper.selectByPrimaryKey(id);
         // 文档阅读数+1
-        docMapperCust.increaseViewCount(id);
+//        docMapperCust.increaseViewCount(id);
         if (ObjectUtils.isEmpty(content)) {
             return "";
         } else {
@@ -153,7 +153,7 @@ public class DocService {
         // 远程IP+doc.id作为key，24小时内不能重复
         String ip = RequestContext.getRemoteAddr();
         if (redisUtil.validateRepeat("DOC_VOTE_" + id + "_" + ip, 5000)) {
-            docMapperCust.increaseVoteCount(id);
+//            docMapperCust.increaseVoteCount(id);
         } else {
             throw new BusinessException(BusinessExceptionCode.VOTE_REPEAT);
         }
@@ -161,11 +161,11 @@ public class DocService {
         // 推送消息
         Doc docDb = docMapper.selectByPrimaryKey(id);
         String logId = MDC.get("LOG_ID");
-        wsService.sendInfo("【" + docDb.getName() + "】被点赞！", logId);
+//        wsService.sendInfo("【" + docDb.getName() + "】被点赞！", logId);
         // rocketMQTemplate.convertAndSend("VOTE_TOPIC", "【" + docDb.getName() + "】被点赞！");
     }
 
     public void updateEbookInfo() {
-        docMapperCust.updateEbookInfo();
+//        docMapperCust.updateEbookInfo();
     }
 }

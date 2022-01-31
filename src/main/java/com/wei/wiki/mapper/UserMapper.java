@@ -2,21 +2,20 @@ package com.wei.wiki.mapper;
 
 import com.wei.wiki.domain.User;
 import com.wei.wiki.domain.UserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);
 
-    int deleteByPrimaryKey(String user);
+    int deleteByPrimaryKey(Long id);
 
     int insert(User record);
 
     int insertSelective(User record);
-
-    List<User> selectByExampleWithBLOBs(UserExample example);
 
     List<User> selectByExample(UserExample example);
 
