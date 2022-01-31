@@ -41,11 +41,11 @@
                              type="XMLMAPPER"/>
 
 <!--        <table tableName="test" domainObjectName="Test"/>-->
-<!--        <table tableName="ebook"/>-->
-        <table tableName="category"/>
-        <!--<table tableName="doc"/>-->
-        <!--<table tableName="content"/>-->
-        <!--<table tableName="user"/>-->
+<!--&lt;!&ndash;        <table tableName="ebook"/>&ndash;&gt;-->
+<!--        <table tableName="category"/>-->
+<!--        <table tableName="doc"/>-->
+<!--        <table tableName="content"/>-->
+        <table tableName="user"/>
 <!--        <table tableName="ebook_snapshot"/>-->
     </context>
 </generatorConfiguration>
