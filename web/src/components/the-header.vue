@@ -1,6 +1,6 @@
 <template>
   <a-layout-header class="header">
-    <div class="logo">我的的wiki</div>
+    <div class="logo">我的wiki</div>
     <a-menu
         theme="dark"
         mode="horizontal"
