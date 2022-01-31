@@ -36,6 +36,11 @@ public class ActionInterceptor implements HandlerInterceptor {
             return true;
         }
 
+        if ("test".equals(userLoginResp.getLoginName())) {
+            // test用户不拦截
+            return true;
+        }
+
         LOG.info("操作被拦截");
         response.setStatus(HttpStatus.OK.value());
         CommonResp commonResp = new CommonResp();
