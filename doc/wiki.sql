@@ -7,9 +7,9 @@ create table `ebook` (
     `cover` varchar(200) comment '封面',
     `category1_id` bigint comment '分类1',
     `category2_id` bigint comment '分类2',
-    `doc_count` int comment '文档数',
-    `view_count` int comment '阅读数',
-    `vote_count` int comment '点赞数',
+    `doc_count` int not null default 0 comment '文档数',
+    `view_count` int not null  default 0 comment '阅读数',
+    `vote_count` int not null default 0 comment '点赞数',
     primary key (`id`)
 ) engine =innodb default charset =utf8mb4 comment ='电子书';
 
